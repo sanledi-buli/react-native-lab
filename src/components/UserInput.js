@@ -10,6 +10,7 @@ import {
 
 export default class UserInput extends Component {
   render() {
+    console.log(typeof(this.props.source));
     return (
       <View style={styles.inputWrapper}>
         <Image source={this.props.source} style={styles.inlineImg} />
@@ -27,12 +28,12 @@ export default class UserInput extends Component {
 }
 
 UserInput.propTypes = {
-  source: PropTypes.number.isRequred,
-  placeholder: PropTypes.string.isRequred,
+  source: PropTypes.number,
+  placeholder: PropTypes.string,
   secureTextEntry: PropTypes.bool,
   autoCorrect: PropTypes.bool,
   autoCapitalize: PropTypes.string,
-  returnKeyType: PropTypes.string,
+  returnKeyType: PropTypes.string
 }
 
 const DEVICE_WIDTH = Dimensions.get('window').width;

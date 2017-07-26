@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import Wallpaper from '../components/Wallpaper';
 import Logo from '../components/Logo';
 import FormLogin from '../components/FormLogin';

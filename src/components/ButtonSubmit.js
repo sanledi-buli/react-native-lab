@@ -11,6 +11,7 @@ import {
   View
 } from 'react-native';
 import spinner from '../assets/img/loading.gif';
+import { Actions } from 'react-native-router-flux';
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const MARGIN = 40;
@@ -41,6 +42,13 @@ export default class ButtonSubmit extends Component {
     setTimeout(() => {
       this._onGrow();
     }, 2000);
+
+    setTimeout(() => {
+      Actions.signupScreen();
+      this.setState({ isLoading: false });
+      this.buttonAnimated.setValue(0);
+      this.growAnimated.setValue(0);
+    }, 2300);
   }
 
   _onGrow() {
